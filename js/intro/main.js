@@ -1,6 +1,7 @@
 // Starting
 function intro() {
 var start = confirm("Welcome to TxtJelly!");
+alert("We have added some new things such as more content to Level 1 and a health system");
 if(start === true) {
 	p1();
 } else {
