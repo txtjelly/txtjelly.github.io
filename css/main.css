@@ -1,0 +1,17 @@
+body {
+	background: #000;
+	color: #fff;
+}
+#gs {
+	color: white;
+	font-family: helvetica;
+}
+#gs > h3 {
+	cursor: hand;
+	margin: 0;
+	padding: 0px;
+	width: 40px;
+}
+#title {
+	color: #fff;
+}
