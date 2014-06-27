@@ -20,7 +20,7 @@ if (user_input_1 === "cats") {
 	true_i1();
 	end();
 } else {
-	false_il();
+	false_i1();
 	end();
 }
 }
