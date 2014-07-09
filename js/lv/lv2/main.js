@@ -1,5 +1,3 @@
-// Story starts here
-
 // Setup
 function load() {
 	$('#story').append('Level 2<br />');
@@ -19,24 +17,209 @@ window.onload=load;
 //}
 //});
 
-// Day 1
-function day1() {
+// Page 1
+function page1() {
 	bootbox.dialog({
-  message: "Are you ready to play?",
-  title: "Welcome to Txt Jelly!",
+  message: "You are walking along the street on Halloween night. You see a haunted house. You are curious so you approach the door.You notice that there are two doorbells.",
+  title: "Halloween Night",
   buttons: {
     success: {
-      label: "Yes!",
+      label: "You ring the bell to the left",
       className: "btn-success",
       callback: function() {
-        bootbox.alert("Awesome!");
+        page2x();
       }
     },
     danger: {
-      label: "No!",
+      label: "You ring the bell to the right.",
       className: "btn-danger",
       callback: function() {
-        Example.show("uh oh, look out!");
+       page2y();
+      }
+    },
+  }
+});
+}
+//END HERE
+
+// Page 2 x
+//info: trigged if the user rings the left bell in page1();
+function page2x() {
+	bootbox.dialog({
+  message: "You hear a voice that says “Enter, if you dare”.",
+  title: "Halloween Night",
+  buttons: {
+    success: {
+      label: "You enter immediately.",
+      className: "btn-success",
+      callback: function() {
+       page3x();
+      }
+    },
+    danger: {
+      label: "You hesitate, but curiosity overcomes you and you enter slowly.",
+      className: "btn-danger",
+      callback: function() {
+      page3y();
+      }
+    },
+  }
+});
+}
+//END HERE
+// Page 2 y
+//info: this is ran if the user chooses to ring the right bell in page1();
+function page2y() {
+	bootbox.dialog({
+  message: "You hear a voice that says “Come on in, I’ve been waiting for you!”.",
+  title: "Halloween Night",
+  buttons: {
+    success: {
+      label: "You enter with enthusiasm.",
+      className: "btn-success",
+      callback: function() {
+       page3y();
+      }
+    },
+    danger: {
+      label: "You enter slowly, scared but curious.",
+      className: "btn-danger",
+      callback: function() {
+      page3x();
+      }
+    },
+  }
+});
+}
+//END HERE
+
+// Page 3 x
+//info: this is ran if the user chooses to enter immediately in page2x();
+function page3x() {
+	bootbox.dialog({
+  message: "You are now in the front hall. You see a door to the left and some stairs.",
+  title: "Halloween Night",
+  buttons: {
+    success: {
+      label: "You climb up the stairs.",
+      className: "btn-success",
+      callback: function() {
+       page4x();
+      }
+    },
+    danger: {
+      label: "You enter the door to the left.",
+      className: "btn-danger",
+      callback: function() {
+      page4y();
+      }
+    },
+  }
+});
+}
+//END HERE
+
+//Page 3 y
+//info this is ran if the user chooses You hesitate, but curiosity overcomes you and you enter slowly. in page2x();
+function page3y() {
+bootbox.dialog({
+  message: "You hear a voice that says “Come on in, I’ve been waiting for you!”. ",
+  title: "Halloween Night",
+  buttons: {
+    success: {
+      label: "You enter with enthusiasm.",
+      className: "btn-success",
+      callback: function() {
+       page4y();
+      }
+    },
+    danger: {
+      label: "You enter slowly, scared but curious.",
+      className: "btn-danger",
+      callback: function() {
+      page4x();
+      }
+    },
+  }
+});
+}
+//END HERE
+
+
+//Page 3 z
+
+//END HERE
+//Page 4 x
+//info: this is ran if the user chooses to climb up the stairs in page3x();
+function page4x() {
+	bootbox.dialog({
+  message: "You see 2 doors: a blue one and a red one.",
+  title: "Halloween Night",
+  buttons: {
+    success: {
+      label: "You open the blue door.",
+      className: "btn-success",
+      callback: function() {
+       page5x();
+      }
+    },
+    danger: {
+      label: "You open the red door.",
+      className: "btn-danger",
+      callback: function() {
+      page5y();
+      }
+    },
+  }
+});
+}
+
+//END HERE
+
+//Page 4 y
+function page4y() {
+bootbox.dialog({
+  message: "You are now in the front hall. You see a door to the just ahead of you and some stairs.",
+  title: "Halloween Night",
+  buttons: {
+    success: {
+      label: "You go up the stairs.",
+      className: "btn-success",
+      callback: function() {
+       page5y();
+      }
+    },
+    danger: {
+      label: "You enter the door just ahead of you.",
+      className: "btn-danger",
+      callback: function() {
+      page5x();
+      }
+    },
+  }
+});
+}
+//END HERE
+
+//Page 5 x
+//info: this is ran if the user chooses to open the blue door in page4x();
+function page5x() {
+bootbox.dialog({
+  message: "You are in a dark room but you can see two boxes: a black one and a brown one.",
+  title: "Halloween Night",
+  buttons: {
+    success: {
+      label: "Open the black box.",
+      className: "btn-success",
+      callback: function() {
+       page6x();
+      }
+    },
+    danger: {
+      label: "Open the brown box.",
+      className: "btn-danger",
+      callback: function() {
+      page6y();
       }
     },
   }
@@ -44,33 +227,90 @@ function day1() {
 }
 // END HERE
 
-// Night 1 x
-
+//Page 5 y
+function page5y() {
+	bootbox.dialog({
+  message: "You see 2 doors: a blue one and a red one.",
+  title: "Halloween Night",
+  buttons: {
+    success: {
+      label: "You open the blue door.",
+      className: "btn-success",
+      callback: function() {
+       page6y();
+      }
+    },
+    danger: {
+      label: "You open the red door.",
+      className: "btn-danger",
+      callback: function() {
+      page6x();
+      }
+    },
+  }
+});
+}
 // END HERE
 
-// Night 1 y
-
+//Page 6 x
+function page6x() {
+	bootbox.dialog({
+  message: "MEOW... HELLO! Will you please take me home with you?",
+  title: "Halloween night",
+  buttons: {
+    success: {
+      label: "Yes!",
+      className: "btn-success",
+      callback: function() {
+       theEnd();
+      }
+    },
+    danger: {
+      label: "No!",
+      className: "btn-danger",
+      callback: function() {
+      theEnd();
+      }
+    },
+  }
+});
+}
 // END HERE
 
-// Day 2 x
-// info: this is ran from night 1 x
-
-// END HERE
-
-// Day 2 y
-// info: this is ran from night 1 y
-
-// END HERE
-
-// END HERE
-
+//Page 6 y
+function page6y() {
+bootbox.dialog({
+  message: "You are in a dark room but you can see two boxes: a black one and a brown one.",
+  title: "Halloween Night",
+  buttons: {
+    success: {
+      label: "Open the black box.",
+      className: "btn-success",
+      callback: function() {
+       theEnd();
+      }
+    },
+    danger: {
+      label: "Open the brown box.",
+      className: "btn-danger",
+      callback: function() {
+      theEnd();
+      }
+    },
+  }
+});
+}
+// The end
+function theEnd() {
+	bootbox.alert("That's it for level 2!");
+}
 
 // Main game events
 function display() {
 	$('#money').html("Money: " + money);
 	$('#health').html("Health: " + health);
 	$('#armor').html("Armor: " + armor);
-	day1();
+	page1();
 }
 //Armor and Health System!!!
 var health = 10;
