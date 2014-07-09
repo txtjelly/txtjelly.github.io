@@ -73,7 +73,13 @@ function removeMoney() {
 	alert("Money Removed")
 	alert(money);
 }
-
+function checkBuy() {
+	if (money <= 0) {
+		alert("you do not have enough money to buy this item");
+	} else {
+		buyItem();
+	}
+}
 function buyItem() {
 	addArmor();
 	alert("An item has being bought");
