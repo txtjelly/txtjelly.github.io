@@ -303,6 +303,7 @@ bootbox.dialog({
 // The end
 function theEnd() {
 	bootbox.alert("That's it for level 2!");
+  bootbox.alert("Created by Lochie Cameron");
 }
 
 // Main game events
