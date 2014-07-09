@@ -3,15 +3,48 @@
 	<meta charset="UTF-8">
 	<title>Magic</title>
 	<script src="main.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<style>
+	.alertbar {
+		float: right;
+		padding-right: 50px;
+		padding-top: none;
+		position: relative;
+		top: -430px;
+	}
+	.infobar {
+		padding: 0px 0px 0px 0px;
+		margin: 0;
+		width: 10px;
+	}
+	</style>
 </head>
 <body>
 <button onclick="choose()">Kill</button>
+<button onclick="health_p()">Heal</button>
 <button onclick="addArmor()">Add armor</button>
 <br />
-<button onclick="addMoney()">Add Money</button>
+<button id="addmoney" onclick="addMoney()">Add Money</button>
 <button onclick="checkMoney()">Remove Money</button>
 <button onclick="checkBuy()">Buy Armor</button>
 <h3>What's New?</h3>
 <h4>We have changed the defalt health damage up to 2 so click Kill,<br /> then add armor then hit kill it will reduce health by 1 instead of 2!!</h4>
+<div class="infobar">
+<h3>Info</h3>
+<h4>Money:</h4>
+<div id="money"></div>
+<br>
+<h4>Health:</h4>
+<div id="health"></div>
+<br />
+<h4>Armor:</h4>
+<div id="armor"></div>
+<br />
+</div>
+
+<div class="alertbar">
+<h3>Alerts</h3>
+<div id="alerts"></div>
+</div>
 </body>
 </html>
