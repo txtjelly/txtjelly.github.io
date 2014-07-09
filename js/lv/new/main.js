@@ -8,6 +8,7 @@ function main() {
 // Armor and Health System!!!
 var health = 10;
 var armor = 1;
+var money = 0;
 
 function addArmor() {
 	if (armor >= 2) {
@@ -46,4 +47,35 @@ function health_y() {
 	health-=1;
 	alert("health: " + health);
 	alert("It works");
+}
+function checkMoney() {
+	if (money <= 0) {
+		alert("You have no money");
+	} else {
+		removeMoney();
+	}
+}
+function buyItemCheck() {
+	if (money >= 100) {
+		buyItem();
+	} else {
+		alert("You do not have enough money to buy this")
+	}
+}
+
+function addMoney() {
+ money+=100;
+ alert("Money Added")
+ alert(money);
+}
+function removeMoney() {
+	money-=100;
+	alert("Money Removed")
+	alert(money);
+}
+
+function buyItem() {
+	addArmor();
+	alert("An item has being bought");
+	removeMoney();
 }
